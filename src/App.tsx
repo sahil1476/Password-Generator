@@ -160,44 +160,44 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex">
       {/* Side Navigation */}
       <motion.div
-      initial={{ x: -100 }}
-      animate={{ x: 0 }}
-      className="fixed left-0 top-1/4 transform -translate-y-1/2 w-20 bg-blue-800/50 backdrop-blur-sm border-r-2 border-blue-800 flex flex-col items-center py-8 z-50 rounded-tr-2xl rounded-br-2xl "
-    >
-      <div className="mb-12">
-        {/* logo */}
-        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500  to-blue-500 rounded-xl flex items-center justify-center">
-          <Key className="w-6 h-6 text-white" />
-        </div>
-      </div>
+  initial={{ x: -100 }}
+  animate={{ x: 0 }}
+  className="fixed top-0 left-0 w-full md:w-20 md:top-1/4  bg-blue-800/50 backdrop-blur-sm border-b-2 border-blue-800 flex md:flex-col flex-row items-center md:items-center justify-center md:justify-start py-4 md:py-8 gap-10 z-50   md:rounded-tr-2xl md:rounded-br-2xl"
+>
+  <div className="mb-0 md:mb-12">
+    {/* logo */}
+    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+      <Key className="w-6 h-6 text-white" />
+    </div>
+  </div>
 
-      <nav className="flex flex-col items-center gap-4">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => {
-            setShowVault(false);
-            setIsSearching(false);
-            setSearchQuery('');
-          }}
-          className={`p-3 rounded-xl transition-colors ${
-            !showVault ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:bg-gray-700/50'
-          }`}
-        >
-          <KeyRound className="w-6 h-6" />
-        </motion.button>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setShowVault(true)}
-          className={`p-3 rounded-xl transition-colors ${
-            showVault ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:bg-gray-700/50'
-          }`}
-        >
-          <Vault className="w-6 h-6" />
-        </motion.button>
-      </nav>
-    </motion.div>
+  <nav className="flex md:flex-col flex-row items-center gap-4">
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      onClick={() => {
+        setShowVault(false);
+        setIsSearching(false);
+        setSearchQuery('');
+      }}
+      className={`p-3 rounded-xl transition-colors ${
+        !showVault ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:bg-gray-700/50'
+      }`}
+    >
+      <KeyRound className="w-6 h-6" />
+    </motion.button>
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      onClick={() => setShowVault(true)}
+      className={`p-3 rounded-xl transition-colors ${
+        showVault ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:bg-gray-700/50'
+      }`}
+    >
+      <Vault className="w-6 h-6" />
+    </motion.button>
+  </nav>
+</motion.div>
 
       {/* Main Content */}
       <div className="flex-1 p-8 flex items-center justify-center relative overflow-hidden">
@@ -207,7 +207,7 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           className="w-full max-w-md relative z-10"
         >
-          <div className="bg-gray-800/50 p-8 rounded-2xl shadow-xl backdrop-blur-sm border border-gray-700">
+          <div className="bg-gray-800/50 p-8 rounded-2xl shadow-xl backdrop-blur-sm border border-gray-700 mt-20 md:mt-0">
             <AnimatePresence mode="wait">
               {showVault ? (
                 <motion.div
