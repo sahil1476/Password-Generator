@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #174576; /* Blue color for the scrollbar thumb */
+  border-radius: 30px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: #3e1111; /* Background color of the scrollbar track */
+  border-radius: 30px; /* Rounded corners for the scrollbar track */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Makes the scrollbar thin */
+  scrollbar-color: #123458 #3c0c0c; /* Thumb color and track color */
+}
+
+
+
 .matrix-bg {
   background-color: rgba(0, 0, 0, 0.7);
   background-image: 
