@@ -17,7 +17,7 @@ A **secure, animated, and responsive** password manager built with **React, Loca
 ## 🖼️ Preview & Screenshots
 
 ### 📌 Live View:
-![](https://via.placeholder.com/800x400.png?text=Dashboard+View)
+![Click Here](https://password-generator-wheat-phi.vercel.app/)
 
 ### 🔥 Animated Password Cards:
 ![Animated Passwords](https://via.placeholder.com/800x400.png?text=Animated+Password+Cards)
@@ -77,23 +77,16 @@ graph TD;
     Buttons-->GeneratePassword;
     Buttons-->ViewPassword;
     Vault-->PasswordCards;
-    PasswordCards-->CopyDelete;
+    PasswordCards-->Copy / Delete;
 ```
 
 ---
 
 ## 📜 License
 
-This project is **open-source** and available under the **MIT License**.
+This project is **open-source** and available for public use.
 
 ---
 
-## 🤝 Contributing
-
-Contributions are **welcome**! Feel free to submit a PR or open an issue.
-
-📩 **Feedback? Questions?** Drop a comment in the issues section!
-
----
 
 
