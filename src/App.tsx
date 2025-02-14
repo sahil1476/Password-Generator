@@ -162,7 +162,7 @@ function App() {
       <motion.div
   initial={{ x: -100 }}
   animate={{ x: 0 }}
-  className="fixed top-0 left-0 w-full md:w-20 md:top-[49%]  md:bg-blue-800/50 backdrop-blur-sm md:border-b-2 border-blue-800 flex md:flex-col flex-row items-center md:items-center justify-center md:justify-start py-4 md:py-8 gap-10 z-50  md:rounded-tr-2xl md:rounded-br-2xl"
+  className="fixed top-0 left-0 w-full md:w-20 md:top-1/4  md:bg-blue-800/50 backdrop-blur-sm md:border-b-2 border-blue-800 flex md:flex-col flex-row items-center md:items-center justify-center md:justify-start py-4 md:py-8 gap-10 z-50  md:rounded-tr-2xl md:rounded-br-2xl"
 >
   <div className="mb-0 md:mb-12">
     {/* logo */}
@@ -338,64 +338,66 @@ function App() {
                   </h2>
 
                   <div className="relative mb-6">
-                    <div className="bg-gray-900/50 p-4 rounded-lg flex items-center justify-between border border-gray-700">
-                      <input
-                        type="text"
-                        value={password}
-                        readOnly
-                        className="bg-transparent text-cyan-400 font-mono flex-1 outline-none"
-                        placeholder="Generated password"
-                      />
-                      <div className="flex gap-2">
-                        <button
-                          onClick={() => copyToClipboard(password)}
-                          className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
-                          title="Copy to clipboard"
-                        >
-                          {copied ? (
-                            <ShieldCheck className="w-5 h-5 text-green-400" />
-                          ) : (
-                            <Copy className="w-5 h-5 text-gray-400" />
-                          )}
-                        </button>
-                        <button
-                          onClick={() => setShowSaveForm(true)}
-                          className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
-                          title="Save to vault"
-                          disabled={!password}
-                        >
-                          <Save className="w-5 h-5 text-cyan-400" />
-                        </button>
-                      </div>
-                    </div>
+                  <div className="bg-gray-900/50 p-4 rounded-lg flex items-center justify-between border border-gray-700">
+  <input
+    type="text"
+    value={password}
+    readOnly
+    className="bg-transparent text-cyan-400 font-mono flex-1 outline-none"
+    placeholder="Generated password"
+  />
+  <div className="flex gap-2 flex-wrap justify-end">
+    <button
+      onClick={() => copyToClipboard(password)}
+      className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
+      title="Copy to clipboard"
+    >
+      {copied ? (
+        <ShieldCheck className="w-5 h-5 text-green-400" />
+      ) : (
+        <Copy className="w-5 h-5 text-gray-400" />
+      )}
+    </button>
+    <button
+      onClick={() => setShowSaveForm(true)}
+      className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
+      title="Save to vault"
+      disabled={!password}
+    >
+      <Save className="w-5 h-5 text-cyan-400" />
+    </button>
+  </div>
+</div>
 
-                    <AnimatePresence>
-                      {showSaveForm && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          className="absolute inset-x-0 top-full mt-2 bg-gray-900/90 border border-gray-700 rounded-lg p-4 backdrop-blur-sm"
-                        >
-                          <div className="flex gap-2">
-                            <input
-                              type="text"
-                              value={newAccount}
-                              onChange={(e) => setNewAccount(e.target.value)}
-                              placeholder="Account/App name"
-                              className="flex-1 bg-gray-800/50 p-2 rounded-lg border border-gray-700 text-white"
-                            />
-                            <button
-                              onClick={saveToVault}
-                              disabled={!password || !newAccount}
-                              className="p-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
-                            >
-                              <Plus className="w-5 h-5" />
-                            </button>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+
+<AnimatePresence>
+  {showSaveForm && (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      className="absolute inset-x-0 top-full mt-2 bg-gray-900/90 border border-gray-700 rounded-lg p-4 backdrop-blur-sm"
+    >
+      <div className="flex flex-wrap gap-2">
+        <input
+          type="text"
+          value={newAccount}
+          onChange={(e) => setNewAccount(e.target.value)}
+          placeholder="Account/App name"
+          className="flex-1 bg-gray-800/50 p-2 rounded-lg border border-gray-700 text-white min-w-0"
+        />
+        <button
+          onClick={saveToVault}
+          disabled={!password || !newAccount}
+          className="p-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          <Plus className="w-5 h-5" />
+        </button>
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
                   </div>
 
                   <div className="space-y-4 mb-6">
