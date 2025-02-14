@@ -20,10 +20,10 @@ A **secure, animated, and responsive** password manager built with **React, Loca
 ![Click Here](https://password-generator-wheat-phi.vercel.app/)
 
 ### 🔥 Animated Password Cards:
-![Animated Passwords](https://via.placeholder.com/800x400.png?text=Animated+Password+Cards)
+![Passwords Generate](https://github.com/sahil1476/Password-Generator/blob/main/img/aa.png)
 
-### 🔧 Generate & Copy Passwords:
-![Generate Passwords](https://via.placeholder.com/800x400.png?text=Generate+%26+Copy+Passwords)
+### 🔧 Vault Passwords:
+![Passwords Vault](https://github.com/sahil1476/Password-Generator/blob/main/img/bb.png)
 
 ---
 
