@@ -17,7 +17,11 @@ A **secure, animated, and responsive** password manager built with **React, Loca
 ## 🖼️ Preview & Screenshots
 
 ### 📌 Live View:
-![Click Here](https://password-generator-wheat-phi.vercel.app/)
+
+You can view the live demo of the project here:
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Available-brightgreen)](https://password-generator-wheat-phi.vercel.app/)
+
 
 ### 🔥 Animated Password Cards:
 ![Passwords Generate](https://github.com/sahil1476/Password-Generator/blob/main/img/aa.png)
