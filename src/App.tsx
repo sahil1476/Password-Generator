@@ -162,7 +162,7 @@ function App() {
       <motion.div
   initial={{ x: -100 }}
   animate={{ x: 0 }}
-  className="fixed top-0 left-0 w-full md:w-20 md:top-1/4  md:bg-blue-800/50 backdrop-blur-sm md:border-b-2 border-blue-800 flex md:flex-col flex-row items-center md:items-center justify-center md:justify-start py-4 md:py-8 gap-10 z-50  md:rounded-tr-2xl md:rounded-br-2xl"
+  className="fixed top-0 left-0 w-full md:w-20 md:top-1/2  md:bg-blue-800/50 backdrop-blur-sm md:border-b-2 border-blue-800 flex md:flex-col flex-row items-center md:items-center justify-center md:justify-start py-4 md:py-8 gap-10 z-50  md:rounded-tr-2xl md:rounded-br-2xl"
 >
   <div className="mb-0 md:mb-12">
     {/* logo */}
